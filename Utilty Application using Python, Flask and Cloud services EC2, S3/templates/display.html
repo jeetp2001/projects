@@ -1,0 +1,12 @@
+<h2>Image Files uplaoded in s3 bucket are : </h2>
+
+{% for i in mylist %}
+<p><a href={{i}}>{{i}}</a></p>
+{% endfor %}
+
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
