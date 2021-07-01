@@ -1,0 +1,45 @@
+
+<h2 align=center>User Form</h2>
+<form action="display">
+<script>
+function getAge() {
+var dateString = document.getElementById("date").value;
+if(dateString !="")
+{
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    var da = today.getDate() - birthDate.getDate();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    if(m<0){
+        m +=12;
+    }
+    if(da<0){
+        da +=30;
+    }
+
+  if(age < 18)
+    {
+    alert("Age "+age+" is restrict");
+
+    } else {
+
+    alert("Age "+age+" is allowed");
+    }
+    } else {
+    alert("please provide your date of birth");
+    }
+}
+
+
+</script>
+<p align=center>Name : <input type='text' name='name' placeholder='enter your name' required pattern="[a-zA-Z\s]+"></p><br>
+<p align=center>Email : <input type='email' name='email' placeholder='enter your email' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></p><br>
+<p align=center>Date of Birth : <input type="date" id="date" placeholder="enter your dob" name="dob" value="1987/08/31" onblur="getAge()"></p><br>
+<p align=center>Phone no. : <input type='tel' name='phone' placeholder='enter your phone no.' pattern="[789][0-9]{9}"></p><br><br>
+<p align=center><input type='submit' value='Submit'></p>
+
+</form>

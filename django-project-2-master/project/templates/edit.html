@@ -1,0 +1,15 @@
+<form action="edited">
+<h2 align=center>Edit User {{edit.name}}</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+{% if messages %}
+	{% for i in messages %}
+	<li align=center>{{i}}</li><br>
+	{% endfor %}
+{% endif %}
+<p align=center>Name : <input type='text' name='name' value={{edit.name}}></p><br>
+<p align=center>Email-ID : <input type='email' name='email' placeholder='enter your email-id' value={{edit.email}} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></p><br>
+<p align=center>Password : <input type="password" placeholder="enter your password" id="password" value={{edit.password}} name="password"></p><br>
+<p align=center>Confirm Password : <input type='password' name='cpassword' id="password" value={{edit.cpassword}} placeholder='enter your password again'></p><br><br>
+<p align=center><input type='submit' value='Edit'></p>
+</form>
+

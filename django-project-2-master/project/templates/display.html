@@ -1,0 +1,24 @@
+<h2 align=center>Users List</h2>
+
+<table align=center class="table table-borderless">
+	<style>table,th,td{padding: 10px; border: 2px solid black; border-collapse: collapse;}</style>
+	<thead class="border-bottom font-wieght-bold">
+		<tr>
+			<td>Username</td>
+			<td>Email-ID</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in display %}
+			<tr>
+				<td>{{i.name}}</td>
+				<td>{{i.email}}</td>
+				<td><a href="{% url 'edit' i.id %}" class="btn text-secondary px-0"><button>Edit</button></a></td>
+				<td><a href="{% url 'delete' i.id %}" class="btn text-secondary px-0"><button>Delete</button></a></td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+

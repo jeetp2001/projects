@@ -1,0 +1,14 @@
+<h2 align=center>User Registration</h2>
+<form action="registered">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+{% if messages %}
+	{% for i in messages %}
+	<li align=center>{{i}}</li><br>
+	{% endfor %}
+{% endif %}
+<p align=center>Username : <input type='text' name='name' placeholder='enter your name' required pattern="[a-zA-Z\s]+"></p><br>
+<p align=center>Email-ID : <input type='email' name='email' placeholder='enter your email-id' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></p><br>
+<p align=center>Password : <input type="password" placeholder="enter your password" id="password" name="password"></p><br>
+<p align=center>Confirm Password : <input type='password' name='cpassword' id="password" placeholder='enter your password again'></p><br><br>
+<p align=center><input type='submit' value='Register'></p>
+</form>

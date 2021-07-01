@@ -1,0 +1,13 @@
+<h2 align=center>User Login</h2>
+<form action="login">
+{% if messages %}
+{% for i in messages %}
+<li align=center>{{i}}</li><br>
+{% endfor %}
+{% endif %}
+
+<p align=center>Email-ID : <input type='email' name='email' placeholder='enter your email-id' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></p><br>
+<p align=center>Password : <input type="password" placeholder="enter your password" name="password"></p><br>
+<p align=center><input type='submit' value='Login'></p>
+</form>
+
