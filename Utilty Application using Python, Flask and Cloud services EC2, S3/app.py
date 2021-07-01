@@ -1,7 +1,7 @@
-Jeet Patel
-Jeet Patel
-11:35 Yesterday
-ip address of this project - http://3.6.39.109/
+#Jeet Patel
+#Jeet Patel
+#11:35 Yesterday
+#ip address of this project - http://3.6.39.109/
 from flask import jsonify, Flask, redirect, render_template, request, url_for
 import boto3
 
