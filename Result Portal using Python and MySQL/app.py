@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import mysql.connector
 
-db=mysql.connector.connect(host="localhost",user="root",database="python",password="G0d!sgreat")
+db=mysql.connector.connect(host="localhost",user="root",database="python",password="-")
 cur=db.cursor()
 
 window1=Tk()
